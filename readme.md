@@ -71,7 +71,7 @@ The *target-mountpoint* is the mount point where the tool will interact with the
 
 ## Known issues / Unsupported behaviour
 - hardlinks and symlinks are not supported and won't be supported
-- renaming across buckets/merchants is not supported
+- renaming across buckets is not supported
 - chown/chmod/setattr is not supported when RIAK is used for reading of files and directories
 - subfolders are not supported beyond the matched path
 - the directory set name must be named so that it does not collide with filenames/directory names inside that directory matching the pattern for this tool
