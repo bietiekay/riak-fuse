@@ -1,0 +1,17 @@
+---
+riak-fuse:
+  build: .
+  privileged: true
+  ports:
+    - "9022:22"
+  volumes:
+    - ".:/src/riak-fuse"
+  links:
+    - riak-kv
+
+riak-kv:
+  image: basho/riak-kv
+  volumes:
+    - "./docker/riak-schemas:/etc/riak/schemas"
+  ports:
+    - "8087:8087"
